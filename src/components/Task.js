@@ -3,7 +3,7 @@ import { useState } from "react";
 import TaskItem from "./TaskItem";
 import EditTask from "./EditTask";
 import { doc, updateDoc, deleteDoc } from "firebase/firestore";
-import { db } from "./firebase";
+import { db } from "../firebase";
 import { toast } from "react-toastify";
 
 function Task({ id, title, description, completed }) {
