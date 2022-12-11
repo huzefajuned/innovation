@@ -1,9 +1,9 @@
 import "./task.css";
 import { useState } from "react";
-import TaskItem from "./TaskItem";
-import EditTask from "./EditTask";
+import TaskItem from "../TaskItem/TaskItem";
+import EditTask from "../EditTask/EditTask";
 import { doc, updateDoc, deleteDoc } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../../firebase";
 import { toast } from "react-toastify";
 
 function Task({ id, title, description, completed }) {
@@ -31,7 +31,7 @@ function Task({ id, title, description, completed }) {
     const taskDocRef = doc(db, "tasks", id);
     try {
       await deleteDoc(taskDocRef);
-      toast.error("task deleted");
+      toast.error("task deleted ❌");
     } catch (err) {
       toast.error(err);
     }

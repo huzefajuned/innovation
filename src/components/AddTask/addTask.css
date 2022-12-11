@@ -1,0 +1,51 @@
+.addTask {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    z-index: 100;
+    /* background-color: rgb(92, 117, 109); */
+}
+
+.addTask input {
+    height: 40px;
+    border: unset;
+    font-size: 18px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-bottom: 1.5px solid hsl(210, 10%, 75%);
+    padding-left: 5px;
+}
+
+.addTask input:focus {
+    outline: none;
+}
+
+.addTask button {
+    height: 40px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background-color: #c0eee4;
+}
+
+.addTask textarea {
+    height: 150px;
+    border-color: hsl(210, 10%, 75%);
+    padding: 5px;
+    font-size: 18px;
+}
+
+.addTask textarea:focus {
+    outline: none;
+}
+
+.addTask button:hover {
+    color: black;
+    background-color: #f8f988;
+}
+
+.addTask button:active {
+    background-color: #c0eee4;
+}

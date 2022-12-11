@@ -8,6 +8,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { auth } from "../firebase"; // update path to your firestore config
+import { toast } from "react-toastify";
 const userAuthContext = createContext();
 
 export function UserAuthContextProvider({ children }) {
@@ -20,6 +21,7 @@ export function UserAuthContextProvider({ children }) {
     return createUserWithEmailAndPassword(auth, email, password);
   }
   function logOut() {
+    toast.success("Logged Out s ");
     return signOut(auth);
   }
   function googleSignIn() {

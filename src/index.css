@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 body {
-    background-color: rgb(116, 116, 108);
-    font-family: monospace;
+    background-color: #c0eee4;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }

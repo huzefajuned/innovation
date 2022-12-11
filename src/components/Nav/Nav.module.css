@@ -1,0 +1,42 @@
+nav {
+    background-color: #ff9e9e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    width: 20%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 30%;
+    padding: 10px;
+}
+
+.buttons>button {
+    cursor: pointer;
+    width: 100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #c0eee4;
+}
+
+.buttons>button:hover {
+    color: blue;
+    background-color: #f8f988;
+    padding: 5px;
+}

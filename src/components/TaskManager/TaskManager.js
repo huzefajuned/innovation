@@ -1,9 +1,9 @@
-import "./taskManager.css";
-import Task from "./Task";
+import "../TaskManager/TaskManager.module.css";
+import Task from "../Task/Task";
 import { useState, useEffect } from "react";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
-import { db } from "../firebase";
-import AddTask from "./AddTask";
+import { db } from "../../firebase";
+import AddTask from "../AddTask/AddTask";
 
 function TaskManager() {
   const [openAddModal, setOpenAddModal] = useState(false);
@@ -27,8 +27,6 @@ function TaskManager() {
 
   return (
     <div className="taskManager">
-      {/* Nav Component */}
-      {/* <Nav /> */}
       <div className="taskManager__container">
         <button onClick={() => setOpenAddModal(true)}>Add task +</button>
         <div className="taskManager__tasks">

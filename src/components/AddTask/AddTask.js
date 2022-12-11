@@ -1,7 +1,7 @@
-import Modal from "./Modal";
+import Modal from "../Modal/Modal";
 import { useState } from "react";
 import "./addTask.css";
-import { db } from "../firebase";
+import { db } from "../../firebase";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 import { toast } from "react-toastify";
@@ -14,7 +14,7 @@ function AddTask({ onClose, open }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!title || !description) {
-      toast.error("fill credentials");
+      toast.error("Invalid Inputs ❌");
     } else {
       try {
         await addDoc(collection(db, "tasks"), {
@@ -23,8 +23,9 @@ function AddTask({ onClose, open }) {
           completed: false,
           created: Timestamp.now(),
         });
-        toast.success("task added");
-
+        setTitle("");
+        setDescription("");
+        toast.success("task added ✅");
         onClose();
       } catch (err) {
         toast.error(err);
